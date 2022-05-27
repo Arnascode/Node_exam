@@ -15,3 +15,8 @@ Content-Type: application/json
   "email": "Jese@bond.com",
   "password": "123456"
 }
+
+###
+GET http://localhost:3000/group
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY1MzY2NTA1NSwiZXhwIjoxNjUzNjY4NjU1fQ.SJL4cXfomZ4zUw4qp0rqOaoGnFuxiTHybsGesVfBjzM
+### 
