@@ -18,5 +18,14 @@ Content-Type: application/json
 
 ###
 GET http://localhost:3000/group
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY1MzY2NTA1NSwiZXhwIjoxNjUzNjY4NjU1fQ.SJL4cXfomZ4zUw4qp0rqOaoGnFuxiTHybsGesVfBjzM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY1MzY3MTg3NywiZXhwIjoxNjUzNjc1NDc3fQ.9phVI4rOzKLa-I2XiegCOTzmS21sKeTotmavPxf5XHU
+### 
+
+POST http://localhost:3000/accounts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY1MzY3MTg3NywiZXhwIjoxNjUzNjc1NDc3fQ.9phVI4rOzKLa-I2XiegCOTzmS21sKeTotmavPxf5XHU
+
+{
+  "group_id": "3",
+  "user_id": ""
+}
 ### 

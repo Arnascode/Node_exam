@@ -68,10 +68,35 @@ async function validateToken(req, res, next) {
     });
   }
 }
+async function validateTokenAnd(req, res, next) {
+  const tokenFromHeaders = req.headers.authorization?.split(' ')[1];
+  console.log('req.headers.authorization ===', req.headers.authorization);
+  if (!tokenFromHeaders) {
+    res.status(401).json({
+      success: false,
+      error: 'no token',
+    });
+    return;
+  }
+  try {
+    const tokenPayload = jwt.verify(tokenFromHeaders, jwtSecret);
+    const { userId } = tokenPayload;
+    req.userId = userId;
+    console.log('tokenPayload ===', tokenPayload);
+    next();
+  } catch (error) {
+    console.log('error verifyRezult ===', error);
+    res.status(403).json({
+      success: false,
+      error: 'invalid token',
+    });
+  }
+}
 
 module.exports = {
   showBody,
   validateUser,
   validateToken,
   validateUserLogin,
+  validateTokenAnd,
 };
