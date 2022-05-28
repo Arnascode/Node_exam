@@ -2,9 +2,9 @@ const express = require('express');
 const { validateToken } = require('../middleware');
 const { getGrBill, newGrBill } = require('../model/billModel');
 
-const billRoutes = express.Router();
+const billsRoutes = express.Router();
 
-billRoutes.get('/bill/:groupId', validateToken, async (req, res) => {
+billsRoutes.get('/bills/:groupId', validateToken, async (req, res) => {
   try {
     const { groupId } = req.params;
     const data = await getGrBill(groupId);
@@ -14,7 +14,7 @@ billRoutes.get('/bill/:groupId', validateToken, async (req, res) => {
   }
 });
 
-billRoutes.post('/bill', validateToken, async (req, res) => {
+billsRoutes.post('/bills', validateToken, async (req, res) => {
   const { groupId, amount, description } = req.body;
   try {
     const data = await newGrBill(groupId, amount, description);
@@ -28,4 +28,4 @@ billRoutes.post('/bill', validateToken, async (req, res) => {
   }
 });
 
-module.exports = billRoutes;
+module.exports = billsRoutes;

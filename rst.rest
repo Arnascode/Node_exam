@@ -16,10 +16,10 @@ Content-Type: application/json
 }
 ###
 GET http://localhost:3000/group
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY1MzcyNzY5OSwiZXhwIjoxNjUzNzMxMjk5fQ.6g_Awqldzw9HFO91ByNHLyrSeQsvkP4dySQu5tm-4bA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY1Mzc0ODI0MSwiZXhwIjoxNjUzNzUxODQxfQ.tMbQtZ09SYDDZtgRw5Zqh8HkOlUQSgAs7J3p1YA8pWs
 ###
 POST http://localhost:3000/group
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY1MzcyNzY5OSwiZXhwIjoxNjUzNzMxMjk5fQ.6g_Awqldzw9HFO91ByNHLyrSeQsvkP4dySQu5tm-4bA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY1Mzc0ODI0MSwiZXhwIjoxNjUzNzUxODQxfQ.tMbQtZ09SYDDZtgRw5Zqh8HkOlUQSgAs7J3p1YA8pWs
 Content-Type: application/json
 
 {
@@ -30,23 +30,23 @@ Content-Type: application/json
 
 POST http://localhost:3000/accounts
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE0LCJpYXQiOjE2NTM3MjgzNTcsImV4cCI6MTY1MzczMTk1N30.lHkgUpMNV2jFeOj0a__rAPQJyKEnagEVK2LYbey_4eU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY1Mzc0ODI0MSwiZXhwIjoxNjUzNzUxODQxfQ.tMbQtZ09SYDDZtgRw5Zqh8HkOlUQSgAs7J3p1YA8pWs
 
 {
-"group_id": 3
+"group_id": 1
 }
 
 ###
 GET http://localhost:3000/accounts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY1Mzc0ODI0MSwiZXhwIjoxNjUzNzUxODQxfQ.tMbQtZ09SYDDZtgRw5Zqh8HkOlUQSgAs7J3p1YA8pWs
+
+###
+GET http://localhost:3000/bills/2
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE0LCJpYXQiOjE2NTM3MjgzNTcsImV4cCI6MTY1MzczMTk1N30.lHkgUpMNV2jFeOj0a__rAPQJyKEnagEVK2LYbey_4eU
 
 ###
-GET http://localhost:3000/bill/2
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE0LCJpYXQiOjE2NTM3MjgzNTcsImV4cCI6MTY1MzczMTk1N30.lHkgUpMNV2jFeOj0a__rAPQJyKEnagEVK2LYbey_4eU
-
-###
-POST http://localhost:3000/bill
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY1MzcyOTA1OCwiZXhwIjoxNjUzNzMyNjU4fQ.1j-vdkzvB4CCKQ8LXK2F7XrAUWxVMePlRkVjqcw3U2c
+POST http://localhost:3000/bills
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY1MzczNzkwOCwiZXhwIjoxNjUzNzQxNTA4fQ.i5Btkwgg8G7KeGnLCQ5JCzYqcPfMDo7APl99DWWwg4s
 Content-Type: application/json
 
 {

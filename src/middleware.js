@@ -3,7 +3,6 @@ const jwt = require('jsonwebtoken');
 const { jwtSecret } = require('./config');
 
 async function validateUser(req, res, next) {
-  // validuoti gauta email ir password
   const schema = Joi.object({
     fullName: Joi.string().min(5).max(30).required(),
     // eslint-disable-next-line newline-per-chained-call

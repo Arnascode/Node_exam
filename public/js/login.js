@@ -38,10 +38,9 @@ formEl.addEventListener('submit', async (event) => {
   if (dataInJs.success === true) {
     console.log('login success');
     errroEl.textContent = '';
-    // issaugoti reiksme localStorage
     const { token } = dataInJs;
     localStorage.setItem('groupUserToken', token);
-    window.location.replace('group.html');
+    window.location.replace('groups.html');
   } else {
     console.log('login fail');
     handleError(dataInJs);

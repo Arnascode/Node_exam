@@ -1,6 +1,5 @@
 console.log('register here');
 const BASE_URL = 'http://localhost:3000';
-
 const formEl = document.forms.register;
 const errroEl = document.getElementById('err');
 
@@ -26,11 +25,9 @@ async function registerFetch(fullName, email, password) {
     body: JSON.stringify(registerObj),
   });
   if (resp.status === 201) {
-    // success
     handleError('register success');
     window.location.replace('login.html');
   } else {
-    // fail
     handleError(await resp.json());
   }
 }
@@ -38,22 +35,15 @@ async function registerFetch(fullName, email, password) {
 formEl.addEventListener('submit', (e) => {
   e.preventDefault();
   console.log('reg');
-  // 1. paimti formos duomenis
   const formData = {
     fullName: formEl.elements.fullName.value,
     email: formEl.elements.email.value,
     password: formEl.elements.password.value,
     repeatPassword: formEl.elements.repeat_password.value,
   };
-  console.log('formData ===', formData);
-  // 2. palytingi ar sutampa slaptazodziai
   if (formData.password !== formData.repeatPassword) {
     handleError('Password dont match');
     return;
   }
-
   registerFetch(formData.fullName, formData.email, formData.password);
 });
-
-// 3. jei sutampa siusti i registracijos endpointa
-// 4. pranesti apie klaida jei tokia ivyko

@@ -18,6 +18,7 @@ async function addUserToDb(fullName, email, password) {
     conn?.end();
   }
 }
+
 async function findUserByEmail(email) {
   let conn;
   try {

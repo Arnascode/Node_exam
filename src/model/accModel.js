@@ -27,7 +27,6 @@ function joinInto(id) {
 
 async function addUserToAcc(req, res) {
   const { group_id, user_id } = req.body;
-  const tokenFromHeaders = req.headers.authorization.split(' ')[1];
   const idfromToken = req.userId;
   try {
     const saveResult = await instertInto(group_id, idfromToken);
