@@ -2,13 +2,6 @@ const Joi = require('joi');
 const jwt = require('jsonwebtoken');
 const { jwtSecret } = require('./config');
 
-function showBody(req, res, next) {
-  if (req.method === 'POST') {
-    console.log('request body ===', req.body);
-  }
-  next();
-}
-
 async function validateUser(req, res, next) {
   // validuoti gauta email ir password
   const schema = Joi.object({
@@ -70,7 +63,6 @@ async function validateToken(req, res, next) {
 }
 
 module.exports = {
-  showBody,
   validateUser,
   validateToken,
   validateUserLogin,

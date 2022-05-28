@@ -2,12 +2,11 @@ POST http://localhost:3000/register
 Content-Type: application/json
 
 {
-    "fullName": "Jese bond",
-  "email": "Jese@bond.com",
+    "fullName": "Jesess bond",
+  "email": "Jeses@bond.com",
   "password": "123456"
 }
 ###
-
 POST http://localhost:3000/login
 Content-Type: application/json
 
@@ -15,8 +14,43 @@ Content-Type: application/json
   "email": "Jese@bond.com",
   "password": "123456"
 }
-
 ###
 GET http://localhost:3000/group
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY1MzY2NTA1NSwiZXhwIjoxNjUzNjY4NjU1fQ.SJL4cXfomZ4zUw4qp0rqOaoGnFuxiTHybsGesVfBjzM
-### 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY1MzcyNzY5OSwiZXhwIjoxNjUzNzMxMjk5fQ.6g_Awqldzw9HFO91ByNHLyrSeQsvkP4dySQu5tm-4bA
+###
+POST http://localhost:3000/group
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY1MzcyNzY5OSwiZXhwIjoxNjUzNzMxMjk5fQ.6g_Awqldzw9HFO91ByNHLyrSeQsvkP4dySQu5tm-4bA
+Content-Type: application/json
+
+{
+  "name":"Easter"
+}
+
+###
+
+POST http://localhost:3000/accounts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE0LCJpYXQiOjE2NTM3MjgzNTcsImV4cCI6MTY1MzczMTk1N30.lHkgUpMNV2jFeOj0a__rAPQJyKEnagEVK2LYbey_4eU
+
+{
+"group_id": 3
+}
+
+###
+GET http://localhost:3000/accounts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE0LCJpYXQiOjE2NTM3MjgzNTcsImV4cCI6MTY1MzczMTk1N30.lHkgUpMNV2jFeOj0a__rAPQJyKEnagEVK2LYbey_4eU
+
+###
+GET http://localhost:3000/bill/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE0LCJpYXQiOjE2NTM3MjgzNTcsImV4cCI6MTY1MzczMTk1N30.lHkgUpMNV2jFeOj0a__rAPQJyKEnagEVK2LYbey_4eU
+
+###
+POST http://localhost:3000/bill
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY1MzcyOTA1OCwiZXhwIjoxNjUzNzMyNjU4fQ.1j-vdkzvB4CCKQ8LXK2F7XrAUWxVMePlRkVjqcw3U2c
+Content-Type: application/json
+
+{
+  "groupId": 2,
+  "amount": 1,
+  "description": "Food"
+}
