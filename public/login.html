@@ -4,21 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
-    />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Login</title>
     <script src="js/login.js" defer></script>
   </head>
   <body>
-    <h1>Login here</h1>
+    <header>
+      <h1>Split Bill</h1>
+      <img src="./img/split_bill.png" alt="header_img" srcset="" />
+    </header>
     <form id="login">
-      <h4 id="err"></h4>
+      <h2>Login here</h2>
+      <h3 id="err"></h3>
       <input type="text" name="email" placeholder="Email" />
       <input type="password" name="password" placeholder="Password" />
       <button type="submit">login</button>
+      <p>Do you want to <a href="./register.html"> register ?</a></p>
     </form>
-    <p>Do you want to <a href="./register.html"> register ?</a></p>
   </body>
 </html>
