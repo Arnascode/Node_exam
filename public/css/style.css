@@ -72,3 +72,7 @@ button:hover {
 p {
   margin-top: 35px;
 }
+
+label {
+  margin-top: 10px;
+}
