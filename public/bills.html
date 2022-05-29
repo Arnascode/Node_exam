@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bills</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="./js/bills.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <a href="#" class="signout">Sign out</a>
+      <a href="groups.html" class="active">Groups</a>
+    </nav>
+    <header>
+      <h1>Split Bill</h1>
+      <img src="./img/split_bill.png" alt="header_img" srcset="" />
+    </header>
+
+    <article>
+      <form class="form">
+        <h1>Add bill</h1>
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" name="amount" />
+        <label for="description">For what ?</label>
+        <input type="text" id="description" name="description" />
+        <button type="submit">Add</button>
+      </form>
+    </article>
+    <h3>Our's Expenses</h3>
+    <section>
+      <table class="showBill"></table>
+    </section>
+  </body>
+</html>
