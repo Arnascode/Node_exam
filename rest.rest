@@ -1,0 +1,56 @@
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "fullName": "Jimmy Bond",
+  "email": "jimmy@bond.com",
+  "password": "123456"
+}
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "jonas@petras.lt",
+  "password": "123456"
+}
+###
+GET http://localhost:3000/group
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsImlhdCI6MTY1MzgzMDkyMSwiZXhwIjoxNjUzODM0NTIxfQ.hZIGTMpeIsTGlPXgOrWp_7EHUffWp21KvpgKksVpmKI
+###
+POST http://localhost:3000/group
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsImlhdCI6MTY1MzgzMDkyMSwiZXhwIjoxNjUzODM0NTIxfQ.hZIGTMpeIsTGlPXgOrWp_7EHUffWp21KvpgKksVpmKI
+Content-Type: application/json
+
+{
+  "name":"Easter"
+}
+
+###
+
+POST http://localhost:3000/accounts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwLCJpYXQiOjE2NTM4MzE0OTcsImV4cCI6MTY1MzgzNTA5N30.Mj4OpOeQd99pLefxutvoQzRM-MY53yIoSmkY53KHB3o
+
+{
+"group_id": 5
+}
+
+###
+GET http://localhost:3000/accounts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjksImlhdCI6MTY1MzgzMTEzNiwiZXhwIjoxNjUzODM0NzM2fQ.vifvemcpKLRTXnlZ84Q2VTS7fiy6wG1gPlz0f6QtzXo
+
+###
+GET http://localhost:3000/bills/6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjksImlhdCI6MTY1MzgzMTEzNiwiZXhwIjoxNjUzODM0NzM2fQ.vifvemcpKLRTXnlZ84Q2VTS7fiy6wG1gPlz0f6QtzXo
+
+###
+POST http://localhost:3000/bills
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjksImlhdCI6MTY1MzgzMTEzNiwiZXhwIjoxNjUzODM0NzM2fQ.vifvemcpKLRTXnlZ84Q2VTS7fiy6wG1gPlz0f6QtzXo
+Content-Type: application/json
+
+{
+  "groupId": 6,
+  "amount": 100,
+  "description": "Food"
+}
