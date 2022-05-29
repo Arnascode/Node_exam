@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 const BASE_URL = 'http://localhost:3000';
 const token = localStorage.getItem('groupUserToken');
 const groupId = window.location.search.split('=')[1];
