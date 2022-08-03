@@ -1,25 +1,22 @@
-# Split Bill Web page
+#Project Title
+Split Bill Web page
 
-## 1
+#Short Description
+This is an application that allows you to add bills and share them with others. To have all access you have to be a registered user 🔐.
 
-### npm init and .env create
+The project has been made using Js for FE and Node Js (sql) for BE 💡
 
-## 2
+HOW TO GET STARTED 🏜
+To run this project, clone both repository (click the green "Code" button on the top right corner and use the HTTPS link) OR press Download ZIP and open the downloaded files with the code editor of your choice
 
-### login to sql
+Rename the .env example file to .env fill in your back-end details.
 
-## 3
+Do the following commands to start Back-End
+npm i
+start sql
+copy sql.database
+npm start then click public/login.html start witl live server and you ready to go.
+password of user is 123456
 
-### start sql
-
-## 4
-
-### insert database node_exam
-
-## 5
-
-### npm start
-
-## 6
-
-### Well done
+Enjoy the program! 🏁
+The Author 💻 Arnas Vilkoncius
